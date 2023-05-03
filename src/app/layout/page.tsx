@@ -11,7 +11,7 @@ import TypographySvg from "@/assets/svg/categories/layout/typography.svg";
 const categories = [
   {id: 111, Icon: TypographySvg, title: "Typography", info: "Lorem ipsum", href: "/layout/typography"},
   {id: 112, Icon: FlexSvg, title: "Flexbox", info: "Lorem ipsum", href: "/layout/flex"},
-  {id: 112, Icon: GridSvg, title: "Grid", info: "Lorem ipsum", href: "/layout/grid"},
+  {id: 113, Icon: GridSvg, title: "Grid", info: "Lorem ipsum", href: "/layout/grid"},
   {id: 114, Icon: CategorySvg, title: "Categories", info: "Lorem ipsum", href: "/layout/categories"},
 ];
 

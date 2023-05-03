@@ -11,7 +11,7 @@ import UiSvg from "@/assets/svg/categories/ui.svg";
 const categories = [
   {id: 111, Icon: UiSvg, title: "UI", info: "Lorem ipsum", href: "/ui"},
   {id: 112, Icon: LayoutSvg, title: "Layout", info: "Lorem ipsum", href: "/layout"},
-  {id: 112, Icon: EcommerceSvg, title: "E-commerce", info: "Lorem ipsum", href: "/ecommerce"},
+  {id: 113, Icon: EcommerceSvg, title: "E-commerce", info: "Lorem ipsum", href: "/ecommerce"},
   {id: 114, Icon: ProfileSvg, title: "Profile", info: "Lorem ipsum", href: "/profile"},
   {id: 115, Icon: AudioSvg, title: "Audio", info: "Lorem ipsum", href: "/audio"},
 ];
