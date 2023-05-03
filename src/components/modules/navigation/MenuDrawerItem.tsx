@@ -1,4 +1,5 @@
-import React, {useEffect, useLayoutEffect, useRef, useState} from "react";
+"use-client";
+import React, {useEffect, useRef, useState} from "react";
 import Link from "next/link";
 
 type MenuDrawerItemProps = {
@@ -18,7 +19,7 @@ const MenuDrawerItem = ({id, url, title, Icon, list, isCollapsed}: MenuDrawerIte
   const [hasClicked, setHasClicked] = useState<boolean>(false);
   const buttonRef = useRef<HTMLLIElement>(null);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (isOpen && !isOverButton && !isOverList && !isTouchInput) {
       buttonRef.current?.click();
       setIsOpen(false);
@@ -54,6 +55,7 @@ const MenuDrawerItem = ({id, url, title, Icon, list, isCollapsed}: MenuDrawerIte
       }}
     >
       {list && list.length > 0 ? (
+        //item with on hover box
         <>
           <div className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg cursor-pointer select-none dark:text-white hover:bg-gray-100 dark:hover:bg-dark-900">
             <div className="w-8 h-8">
@@ -82,6 +84,7 @@ const MenuDrawerItem = ({id, url, title, Icon, list, isCollapsed}: MenuDrawerIte
           ) : null}
         </>
       ) : (
+        //link without on hover box
         <Link href={url} className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-dark-900">
           <div className="w-8 h-8">
             <Icon />
