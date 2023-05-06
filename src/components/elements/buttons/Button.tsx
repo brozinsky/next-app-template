@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {ReactNode, useState} from "react";
 import {cva, VariantProps} from "class-variance-authority";
 import {ButtonOrLink, Props as ButtonOrLinkProps} from "./ButtonOrLink";
 import {useEffect} from "react";
@@ -53,8 +53,8 @@ interface Props extends ButtonOrLinkProps, VariantProps<typeof buttonStyles> {
   size?: "default" | "lg" | null | undefined;
   rounded?: "default" | "none" | "full" | null | undefined;
   isUppercase?: boolean;
-  startIcon?: string;
-  endIcon?: string;
+  startIcon?: ReactNode;
+  endIcon?: ReactNode;
   label: string;
   color?: string;
 }
