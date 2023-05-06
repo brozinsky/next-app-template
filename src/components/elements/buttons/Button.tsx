@@ -49,17 +49,17 @@ const labelStyles = cva(null, {
 });
 
 interface Props extends ButtonOrLinkProps, VariantProps<typeof buttonStyles> {
-  variant: "primary" | "shine" | "mono" | "danger" | "neon" | "outlined" | null | undefined;
-  size: "default" | "lg" | null | undefined;
-  rounded: "default" | "none" | "full" | null | undefined;
-  isUppercase: boolean;
-  startIcon: string;
-  endIcon: string;
+  variant?: "primary" | "shine" | "mono" | "danger" | "neon" | "outlined" | null | undefined;
+  size?: "default" | "lg" | null | undefined;
+  rounded?: "default" | "none" | "full" | null | undefined;
+  isUppercase?: boolean;
+  startIcon?: string;
+  endIcon?: string;
   label: string;
-  color: string;
+  color?: string;
 }
 
-const Button = ({isUppercase, startIcon, endIcon, variant, label, size, rounded, color, ...props}: Props) => {
+const Button = ({isUppercase = false, startIcon, endIcon, variant = "primary", label, size = "default", rounded = "default", color, ...props}: Props) => {
   const marginLeft = startIcon !== undefined;
   const marginRight = endIcon !== undefined;
   const [animates, setAnimate] = useState(false);
