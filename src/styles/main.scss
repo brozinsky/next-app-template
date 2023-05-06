@@ -11,6 +11,76 @@
   --delay: 0.5s;
   --timing: 1.5s;
 }
+
+@layer base {
+  :root {
+    --color-primary-100: #8dc6fb;
+    --color-primary-200: #6ab4fa;
+    --color-primary-300: #48a3f8;
+    --color-primary-400: #2592f7;
+    --color-primary-500: #1188f7;
+    --color-primary-600: #066ecf;
+    --color-primary-700: #055cac;
+    --color-primary-800: #04498a;
+    --color-primary-900: #033767;
+
+    --color-dark-50: #3a3a3a;
+    --color-dark-100: #343434;
+    --color-dark-200: #323232;
+    --color-dark-300: #2c2c2c;
+    --color-dark-400: #2c2c2c;
+    --color-dark-500: #262626;
+    --color-dark-600: #242424;
+    --color-dark-700: #202020;
+    --color-dark-800: #1c1c1c;
+    --color-dark-900: #121212;
+
+    --color-elevation-50: #aaa;
+    --color-elevation-100: #aaa;
+    --color-elevation-200: #dedede;
+    --color-elevation-300: #dedede;
+    --color-elevation-400: #dedede;
+    --color-elevation-500: #eee;
+    --color-elevation-600: #fdfdfd;
+    --color-elevation-700: #fdfdfd;
+    --color-elevation-800: #fdfdfd;
+    --color-elevation-900: #fff;
+  }
+  :root[data-theme="dark"] {
+    --color-primary-100: #8dc6fb;
+    --color-primary-200: #6ab4fa;
+    --color-primary-300: #48a3f8;
+    --color-primary-400: #2592f7;
+    --color-primary-500: #1188f7;
+    --color-primary-600: #066ecf;
+    --color-primary-700: #055cac;
+    --color-primary-800: #04498a;
+    --color-primary-900: #033767;
+
+    --color-dark-50: #3a3a3a;
+    --color-dark-100: #343434;
+    --color-dark-200: #323232;
+    --color-dark-300: #2c2c2c;
+    --color-dark-400: #2c2c2c;
+    --color-dark-500: #262626;
+    --color-dark-600: #242424;
+    --color-dark-700: #202020;
+    --color-dark-800: #1c1c1c;
+    --color-dark-900: #121212;
+
+    --color-elevation-50: #3a3a3a;
+    --color-elevation-100: #343434;
+    --color-elevation-200: #323232;
+    --color-elevation-300: #2c2c2c;
+    --color-elevation-400: #2c2c2c;
+    --color-elevation-500: #262626;
+    --color-elevation-600: #242424;
+    --color-elevation-700: #202020;
+    --color-elevation-800: #1c1c1c;
+    --color-elevation-900: #121212;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
