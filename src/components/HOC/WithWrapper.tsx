@@ -6,11 +6,12 @@ import Container from "@/layout/Container";
 import Flex from "@/layout/Flex";
 import {cva} from "class-variance-authority";
 import React from "react";
+import Breadcrumbs from '@/modules/navigation/Breadcrumbs';
 
-const wrapperClasses = cva(["flex items-center justify-center h-screen transition-all"], {
+const wrapperClasses = cva(["p-8 flex flex-col items-start justify-start h-screen transition-all"], {
   variants: {
     isDrawerOpen: {
-      true: "ml-96",
+      true: "ml-80",
       false: "ml-auto",
     },
   },
@@ -29,6 +30,7 @@ function WithWrapper<T extends WithWrapperProps>(WrappedComponent: React.Compone
         <Flex direction={"row"} gap={5} alignItems="center" justifyContent={"center"}>
           <MenuDrawer isOpen={isDrawerOpen} />
           <Container noMargin variant="main" className={wrapperClasses({isDrawerOpen})}>
+            <Breadcrumbs />
             <WrappedComponent {...props} />
           </Container>
         </Flex>
