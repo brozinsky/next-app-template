@@ -15,7 +15,7 @@ const Icon = () => {
   );
 };
 
-function page() {
+function Page() {
   return (
     <div className="w-full max-w-5xl">
       <Typography variant="h1" size="h3" decoration="lineBot" className={"font-medium mb-8"}>
@@ -82,4 +82,4 @@ function page() {
   );
 }
 
-export default WithWrapper(page);
+export default WithWrapper(Page);

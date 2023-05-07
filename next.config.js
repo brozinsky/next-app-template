@@ -3,6 +3,9 @@
 const path = require("path");
 
 const nextConfig = {
+  images: {
+    domains: ["picsum.photos"],
+  },
   experimental: {
     appDir: true,
   },
