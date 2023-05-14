@@ -3,6 +3,7 @@ import WithWrapper from "@/components/HOC/WithWrapper";
 import Typography from "@/elements/Typography";
 import Button from "@/elements/buttons/Button";
 import ButtonIcon from "@/elements/buttons/ButtonIcon";
+import UserSvg from "@/assets/user.svg";
 
 const Icon = () => {
   return (
@@ -76,6 +77,66 @@ function Page() {
           <ButtonIcon icon={<Icon />} />
           <ButtonIcon size={"sm"} rounded={"lg"} color={"gray"} variant={"secondary"} icon={<Icon />} />
           <ButtonIcon size={"sm"} color={"transparent"} variant={"secondary"} icon={<Icon />} />
+        </div>
+      </div>
+      <div className="flex flex-row justify-start w-full max-w-5xl space-x-4">
+        <div className="tile-button">
+          <UserSvg className="w-10 h-10"/>
+          <div>Default</div>
+        </div>
+        <div className="tile-button tile-button--hovered green">
+          <UserSvg className="w-10 h-10"/>
+          <div>Green</div>
+        </div>
+        <div className="tile-button tile-button--hovered blue">
+          <UserSvg className="w-10 h-10"/>
+          <div>Blue</div>
+        </div>
+        <div className="tile-button tile-button--hovered orange">
+          <UserSvg className="w-10 h-10"/>
+          <div>Orange</div>
+        </div>
+        <div className="tile-button tile-button--hovered purple">
+          <UserSvg className="w-10 h-10"/>
+          <div>Purple</div>
+        </div>
+        <div className="tile-button tile-button--hovered yellow">
+          <UserSvg className="w-10 h-10"/>
+          <div>Yellow</div>
+        </div>
+        <div className="tile-button tile-button--hovered red">
+          <UserSvg className="w-10 h-10"/>
+          <div>Red</div>
+        </div>
+      </div>
+      <div className="flex flex-row justify-start w-full max-w-5xl space-x-4">
+        <div className="tile-button">
+          <UserSvg className="w-10 h-10"/>
+          <div>Default</div>
+        </div>
+        <div className="tile-button tile-button--color green">
+          <UserSvg className="w-10 h-10"/>
+          <div>Green</div>
+        </div>
+        <div className="tile-button tile-button--color blue">
+          <UserSvg className="w-10 h-10"/>
+          <div>Blue</div>
+        </div>
+        <div className="tile-button tile-button--color orange">
+          <UserSvg className="w-10 h-10"/>
+          <div>Orange</div>
+        </div>
+        <div className="tile-button tile-button--color purple">
+          <UserSvg className="w-10 h-10"/>
+          <div>Purple</div>
+        </div>
+        <div className="tile-button tile-button--color yellow">
+          <UserSvg className="w-10 h-10"/>
+          <div>Yellow</div>
+        </div>
+        <div className="tile-button tile-button--color red">
+          <UserSvg className="w-10 h-10"/>
+          <div>Red</div>
         </div>
       </div>
     </div>

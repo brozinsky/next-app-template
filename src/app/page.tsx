@@ -18,11 +18,11 @@ const categories = [
 
 const Home = () => {
   return (
-    <div className="w-full max-w-5xl">
+    <div className="w-full max-w-5xl space-y-8">
       <Typography variant="h1" size="h3" decoration="lineBot" className={"font-medium mb-8"}>
         Dashboard
       </Typography>
-      <div className="flex flex-row justify-between w-full h-full max-w-5xl space-x-4">
+      <div className="flex flex-row justify-between w-full max-w-5xl space-x-4">
         {categories.map(({id, Icon, title, info, href}) => {
           return <CategoryTile key={id} Icon={Icon} title={title} info={info} href={href} />;
         })}

@@ -16,12 +16,13 @@ const categories = [
   {id: 113, Icon: ToggleSvg, title: "Toggle", info: "Lorem ipsum", href: "/ui/toggle"},
   {id: 114, Icon: CheckboxSvg, title: "Checkbox", info: "Lorem ipsum", href: "/ui/checkbox"},
   {id: 115, Icon: FaqSvg, title: "Faq", info: "Lorem ipsum", href: "/ui/faq"},
+  {id: 116, Icon: ButtonSvg, title: "Tile", info: "Lorem ipsum", href: "/ui/tile"},
 ];
 
 const UIPage = () => {
   return (
     <>
-      <div className="w-full max-w-5xl">
+      <div className="w-full">
         <Typography variant="h1" size="h3" decoration="lineBot" className={"font-medium mb-8"}>
           User Interface
         </Typography>
