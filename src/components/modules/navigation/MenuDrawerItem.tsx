@@ -58,7 +58,7 @@ const MenuDrawerItem = ({id, url, title, Icon, list, isCollapsed}: MenuDrawerIte
         //item with on hover box
         <>
           <div className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg cursor-pointer select-none dark:text-white hover:bg-gray-100 dark:hover:bg-dark-900">
-            <div className="w-8 h-8">
+            <div className="flex items-center w-8 h-8">
               <Icon />
             </div>
             {!isCollapsed ? <span className="ml-3">{title}</span> : null}
@@ -86,7 +86,7 @@ const MenuDrawerItem = ({id, url, title, Icon, list, isCollapsed}: MenuDrawerIte
       ) : (
         //link without on hover box
         <Link href={url} className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-dark-900">
-          <div className="w-8 h-8">
+          <div className="flex items-center w-8 h-8">
             <Icon />
           </div>
           {!isCollapsed ? <span className="ml-3">{title}</span> : null}

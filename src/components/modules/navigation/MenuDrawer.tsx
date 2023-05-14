@@ -48,7 +48,7 @@ const navItems = [
   {id: 5, title: "Audio", url: "/audio", Icon: AudioSvg},
 ];
 
-const navClasses = cva(["mt-20 fixed z-40 h-screen overflow-visible bg-white w-80 left-0 top-0", "dark:bg-dark-800", "transition-transform"], {
+const navClasses = cva(["mt-20 fixed z-40 h-screen overflow-visible w-80 left-0 top-0 bg-elevation-800", "dark:bg-elevation-800", "transition-transform"], {
   variants: {
     isOpen: {
       true: "",
