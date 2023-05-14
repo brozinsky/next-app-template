@@ -1,0 +1,14 @@
+.toggle {
+    @apply relative inline-flex items-center cursor-pointer;
+    &__label {
+        @apply ml-3 text-sm font-medium text-gray-900 dark:text-gray-300;
+    }
+    &__switch {
+        &:after {
+            @apply absolute bg-white border-gray-300 border rounded-full h-5 w-5 transition-all;
+            content: "";
+            top: 50%;
+            left: 2px;
+        }
+    }
+}
