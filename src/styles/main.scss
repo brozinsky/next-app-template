@@ -45,6 +45,9 @@
     --color-elevation-700: #fdfdfd;
     --color-elevation-800: #fdfdfd;
     --color-elevation-900: #fff;
+
+    --color-green-500: hsl(158, 81%, 39%);
+    --color-green-dark: hsla(158, 90%, 39%, 0.08);
   }
   :root[data-theme="dark"] {
     --color-primary-100: #8dc6fb;
@@ -78,6 +81,9 @@
     --color-elevation-700: #202020;
     --color-elevation-800: #1c1c1c;
     --color-elevation-900: #121212;
+
+    --color-green-500: hsl(158, 81%, 39%);
+    --color-green-dark: hsla(158, 90%, 39%, 0.08);
   }
 }
 

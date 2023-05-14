@@ -1,0 +1,146 @@
+.tile-button {
+  @apply select-none flex flex-col items-center justify-center space-y-2 p-4 h-fit cursor-pointer rounded-lg border border-dark-50 text-slate-300 bg-dark-800;
+  min-width: 7rem;
+  height: 7rem;
+  transition: 0.15s all ease;
+  svg {
+    @apply fill-slate-300;
+  }
+  div,
+  svg {
+    transition: 0.15s all ease;
+  }
+  &:hover {
+    @apply bg-dark-600 border-transparent;
+    svg {
+      @apply fill-white;
+    }
+    div {
+      @apply text-white;
+    }
+  }
+  &--hovered {
+    &.green {
+      &:hover {
+        @apply bg-green-dark border-green-dark;
+        svg {
+          @apply fill-green-500;
+        }
+        div {
+          @apply text-green-500;
+        }
+      }
+    }
+    &.blue {
+      &:hover {
+        @apply bg-blue-500 bg-opacity-10 border-transparent;
+        svg {
+          @apply fill-blue-500;
+        }
+        div {
+          @apply text-blue-500;
+        }
+      }
+    }
+    &.yellow {
+      &:hover {
+        @apply bg-yellow-500 bg-opacity-10 border-transparent;
+        svg {
+          @apply fill-yellow-500;
+        }
+        div {
+          @apply text-yellow-500;
+        }
+      }
+    }
+    &.purple {
+      &:hover {
+        @apply bg-purple-500 bg-opacity-10 border-transparent;
+        svg {
+          @apply fill-purple-500;
+        }
+        div {
+          @apply text-purple-500;
+        }
+      }
+    }
+    &.orange {
+      &:hover {
+        @apply bg-orange-500 bg-opacity-10 border-transparent;
+        svg {
+          @apply fill-orange-500;
+        }
+        div {
+          @apply text-orange-500;
+        }
+      }
+    }
+    &.red {
+      &:hover {
+        @apply bg-red-500 bg-opacity-10 border-transparent;
+        svg {
+          @apply fill-red-500;
+        }
+        div {
+          @apply text-red-500;
+        }
+      }
+    }
+  }
+  &--color {
+    &.green {
+      @apply bg-green-dark border-green-dark;
+      svg {
+        @apply fill-green-500;
+      }
+      div {
+        @apply text-green-500;
+      }
+    }
+    &.blue {
+      @apply bg-blue-500 bg-opacity-10 border-transparent;
+      svg {
+        @apply fill-blue-500;
+      }
+      div {
+        @apply text-blue-500;
+      }
+    }
+    &.yellow {
+      @apply bg-yellow-500 bg-opacity-10 border-transparent;
+      svg {
+        @apply fill-yellow-500;
+      }
+      div {
+        @apply text-yellow-500;
+      }
+    }
+    &.purple {
+      @apply bg-purple-500 bg-opacity-10 border-transparent;
+      svg {
+        @apply fill-purple-500;
+      }
+      div {
+        @apply text-purple-500;
+      }
+    }
+    &.orange {
+      @apply bg-orange-500 bg-opacity-10 border-transparent;
+      svg {
+        @apply fill-orange-500;
+      }
+      div {
+        @apply text-orange-500;
+      }
+    }
+    &.red {
+      @apply bg-red-500 bg-opacity-10 border-transparent;
+      svg {
+        @apply fill-red-500;
+      }
+      div {
+        @apply text-red-500;
+      }
+    }
+  }
+}
