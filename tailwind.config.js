@@ -60,6 +60,11 @@ module.exports = {
           800: "var(--color-elevation-800)",
           900: "var(--color-elevation-900)",
         },
+        "dark-blue": "var(--color-dark-blue)",
+        green: {
+          500: "var(--color-green-500)",
+          "dark": "var(--color-green-dark)",
+        },
       },
     },
   },
