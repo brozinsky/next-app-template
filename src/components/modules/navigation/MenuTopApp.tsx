@@ -3,6 +3,8 @@ import Hamburger from "@/elements/buttons/Hamburger";
 import NavLink from "@/elements/buttons/NavLink";
 import DarkSwitch from "@/elements/buttons/DarkSwitch";
 import ButtonIcon from "@/elements/buttons/ButtonIcon";
+import {useEffect} from 'react'
+import { useMenuDrawer } from "@/store/useDrawerStore";
 
 const navItems = [
   {name: "Page1", url: "/page-1"},
@@ -23,20 +25,25 @@ const Icon = () => {
   );
 };
 
-interface MenuTopAppProps {
-  isDrawerOpen: boolean;
-  toggleDrawer: (isOpen: boolean) => void;
-}
+const MenuTopApp = () => {
+  const { isDrawerOpen, setIsDrawerOpen, toggleIsDrawerOpen } = useMenuDrawer();
 
-const MenuTopApp = ({isDrawerOpen, toggleDrawer}: MenuTopAppProps) => {
-  const handleClick = () => {
-    toggleDrawer(!isDrawerOpen);
-  };
+  useEffect(() => {
+    const storedIsOpen = localStorage.getItem('menuDrawerIsOpen');
+    if (storedIsOpen !== null && storedIsOpen !== undefined) {
+      setIsDrawerOpen(JSON.parse(storedIsOpen));
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('menuDrawerIsOpen', JSON.stringify(isDrawerOpen));
+  }, [isDrawerOpen]);
+
   return (
     <>
-      <header className="sticky top-0 z-50 bg-white shadow-md">
+      <header className="sticky top-0 z-50 bg-elevation-700">
         <nav className="container flex flex-wrap items-center justify-between">
-          {/* <ButtonIcon onClick={handleClick} size={"default"} color={"transparent"} variant={"secondary"} icon={<Icon />} /> */}
+          <ButtonIcon className="self-center" onClick={toggleIsDrawerOpen} size={"default"} color={"transparent"} variant={"primary"} icon={<Icon />} />
           <Link href="/">
             <div className="flex items-center flex-shrink-0 mr-6 text-white cursor-pointer select-none">
               <span className="text-xl font-semibold tracking-tight text-primary-500 dark:text-primary-200">Logo</span>

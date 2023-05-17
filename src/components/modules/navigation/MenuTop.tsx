@@ -12,7 +12,7 @@ const navItems = [
 const MenuTop = () => {
   return (
     <>
-      <header className="sticky top-0 z-50 bg-white shadow-md">
+      <header className="sticky top-0 z-50 shadow-md bg-elevation-800">
         <nav className="container flex flex-wrap items-center justify-between">
           <Link href="/">
             <div className="flex items-center flex-shrink-0 mr-6 text-white cursor-pointer select-none">

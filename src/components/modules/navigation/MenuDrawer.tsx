@@ -1,10 +1,8 @@
-import React from "react";
+import React, {useEffect} from "react";
 import ButtonIcon from "@/elements/buttons/ButtonIcon";
 import {cva} from "class-variance-authority";
-import useToggle from "@/hooks/useToggle";
 import MenuDrawerItem from "@/modules/navigation/MenuDrawerItem";
-
-// import {ReactComponent as EmptySvg} from "@/assets/empty.svg";
+import {useMenuDrawer} from '@/store/useDrawerStore'
 import DashboardSvg from "@/assets/dashboard.svg";
 import EcommerceSvg from "@/assets/ecommerce.svg";
 import ComponentsSvg from "@/assets/components.svg";
@@ -48,43 +46,52 @@ const navItems = [
   {id: 5, title: "Audio", url: "/audio", Icon: AudioSvg},
 ];
 
-const navClasses = cva(["mt-20 fixed z-40 h-screen overflow-visible w-80 left-0 top-0 bg-elevation-800", "dark:bg-elevation-800", "transition-transform"], {
+const navClasses = cva(["mt-20 fixed z-40 h-screen overflow-visible w-80 left-0 top-0 bg-elevation-700", "dark:bg-elevation-700", "transition-transform"], {
   variants: {
-    isOpen: {
+    isDrawerOpen: {
       true: "",
       false: " -translate-x-full",
     },
-    isCollapsed: {
+    isDrawerCollapsed: {
       true: "!w-16",
       false: "",
     },
   },
   defaultVariants: {
-    isOpen: true,
+    isDrawerOpen: true,
+    isDrawerCollapsed: false
   },
 });
 
 export interface MenuDrawerProps extends VariantProps<typeof navClasses> {
-  isOpen: boolean;
+  isCollapsed: boolean;
 }
 
-const MenuDrawer = ({isOpen}: MenuDrawerProps) => {
-  const [isCollapsed, setIsCollapsed] = useToggle(false);
+const MenuDrawer = () => {
+  const { isDrawerOpen, isDrawerCollapsed, setIsDrawerCollapsed, toggleIsDrawerCollapsed } = useMenuDrawer();
 
-  React.useEffect(() => {
-    console.log(isCollapsed);
-  }, [isCollapsed]);
+  useEffect(() => {
+    let storedIsCollapsed: string | null = "false";
+    storedIsCollapsed = localStorage.getItem('menuDrawerIsCollapsed');
+    if (storedIsCollapsed !== null && storedIsCollapsed !== undefined) {
+      setIsDrawerCollapsed(JSON.parse(storedIsCollapsed));
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('menuDrawerIsCollapsed', JSON.stringify(isDrawerCollapsed));
+  }, [isDrawerCollapsed]);
 
   return (
     <>
-      <nav className={navClasses({isOpen, isCollapsed})} tabIndex={-1} aria-labelledby="drawer-navigation-label">
-        <div className={`flex ${isCollapsed ? "justify-start" : "justify-end"}`}>
-          <ButtonIcon size="default" onClick={setIsCollapsed} srOnly={"Close menu"} rounded="lg" color={"transparent"} icon={isCollapsed ? <CollapseSvg /> : <ExpandSvg />} />
+      <nav className={navClasses({isDrawerOpen, isDrawerCollapsed})} tabIndex={-1} aria-labelledby="drawer-navigation-label">
+        <div className={`flex ${isDrawerCollapsed ? "justify-start" : "justify-end"}`}>
+          <ButtonIcon size="default" onClick={toggleIsDrawerCollapsed} srOnly={"Close menu"} rounded="lg" color={"transparent"} icon={isDrawerCollapsed ? <CollapseSvg /> : <ExpandSvg />} />
         </div>
         <div className="py-4 overflow-y-auto">
           <ul className="space-y-2">
             {navItems.map(({id, url, title, Icon, list}) => {
-              return <MenuDrawerItem key={id} id={id} url={url} title={title} Icon={Icon} list={list} isCollapsed={isCollapsed} />;
+              return <MenuDrawerItem key={id} id={id} url={url} title={title} Icon={Icon} list={list} isCollapsed={isDrawerCollapsed} />;
             })}
           </ul>
         </div>
