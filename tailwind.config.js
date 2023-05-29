@@ -60,6 +60,12 @@ module.exports = {
           800: "var(--color-elevation-800)",
           900: "var(--color-elevation-900)",
         },
+        typography: {
+          100: "var(--color-typography-100)",
+          300: "var(--color-typography-300)",
+          500: "var(--color-typography-500)",
+          900: "var(--color-typography-900)",
+        },
         "dark-blue": "var(--color-dark-blue)",
         green: {
           500: "var(--color-green-500)",
