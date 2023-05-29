@@ -1,5 +1,5 @@
 import React, {SVGProps, FC} from "react";
-import Paper from "@/components/elements/Paper";
+import Paper from "@/components/layout/Paper";
 import Typography from "@/components/elements/Typography";
 import Link from "next/link";
 import Image from "next/image";

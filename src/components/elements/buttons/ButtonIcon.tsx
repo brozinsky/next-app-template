@@ -3,6 +3,7 @@ import {cva, VariantProps} from "class-variance-authority";
 import {ButtonOrLink} from "./ButtonOrLink";
 
 interface ButtonIconProps extends VariantProps<typeof buttonStyles> {
+  className?: string;
   icon: ReactNode;
   srOnly?: string;
   onClick?: (event: MouseEvent<HTMLButtonElement> | MouseEvent<HTMLAnchorElement>) => void;
@@ -12,7 +13,7 @@ const buttonStyles = cva("ease-out duration-200", {
   variants: {
     variant: {
       primary: "font-medium text-sm text-center inline-flex items-center",
-      secondary: " absolute top-2.5 right-2.5 inline-flex items-center",
+      secondary: "text-center inline-flex items-center justify-center top-2.5 right-2.5 inline-flex",
     },
     size: {
       default: "px-3.5 py-3.5",
@@ -40,9 +41,9 @@ const buttonStyles = cva("ease-out duration-200", {
   },
 });
 
-const ButtonIcon: React.FC<ButtonIconProps> = ({onClick, icon, size, variant, rounded, color, srOnly, ...props}) => {
+const ButtonIcon: React.FC<ButtonIconProps> = ({className, onClick, icon, size, variant, rounded, color, srOnly, ...props}) => {
   return (
-    <ButtonOrLink onClick={onClick} type="button" className={buttonStyles({variant, size, color, rounded})} {...props}>
+    <ButtonOrLink onClick={onClick} type="button" className={buttonStyles({class: className, variant, size, color, rounded})} {...props}>
       <div className="w-6 h-6">{icon}</div>
       {srOnly ? <span className="sr-only">{srOnly}</span> : null}
     </ButtonOrLink>
