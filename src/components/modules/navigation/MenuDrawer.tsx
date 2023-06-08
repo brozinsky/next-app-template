@@ -46,14 +46,14 @@ const navItems = [
   {id: 5, title: "Audio", url: "/audio", Icon: AudioSvg},
 ];
 
-const navClasses = cva(["mt-20 fixed z-40 h-screen overflow-visible w-80 left-0 top-0 bg-elevation-700", "dark:bg-elevation-700", "transition-transform"], {
+const navClasses = cva(["menu-drawer"], {
   variants: {
     isDrawerOpen: {
       true: "",
-      false: " -translate-x-full",
+      false: "menu-drawer--open",
     },
     isDrawerCollapsed: {
-      true: "!w-16",
+      true: "menu-drawer--collapsed",
       false: "",
     },
   },

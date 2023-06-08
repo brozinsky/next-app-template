@@ -44,7 +44,7 @@ const buttonStyles = cva("ease-out duration-200", {
 const ButtonIcon: React.FC<ButtonIconProps> = ({className, onClick, icon, size, variant, rounded, color, srOnly, ...props}) => {
   return (
     <ButtonOrLink onClick={onClick} type="button" className={buttonStyles({class: className, variant, size, color, rounded})} {...props}>
-      <div className="w-6 h-6">{icon}</div>
+      <div className="flex items-center justify-center w-6 h-6">{icon}</div>
       {srOnly ? <span className="sr-only">{srOnly}</span> : null}
     </ButtonOrLink>
   );

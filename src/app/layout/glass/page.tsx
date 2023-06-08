@@ -14,7 +14,7 @@ function Page() {
         <Typography variant="h2" size="h5" decoration="none" className={"mb-4"}>
           Elevation
         </Typography>
-        <div className="flex flex-row justify-start w-full max-w-5xl space-x-4">
+        <div className="flex flex-row justify-start w-full max-w-5xl flex-wrap gap-4">
           <Paper opacity={10} blur="md" elevation={1}>
                 <Typography variant="h2" size="h5" decoration="none">
                     Elevation 1
@@ -62,7 +62,7 @@ function Page() {
         <Typography variant="h2" size="h5" decoration="none" className={"mb-4"}>
           Rounded
         </Typography>
-        <div className="flex flex-row justify-start w-full max-w-5xl space-x-4">
+        <div className="flex flex-row justify-start w-full max-w-5xl flex-wrap gap-4">
           <Glass rounded="default">
                 <Typography variant="h2" size="h5" decoration="none">
                     Rounded default
@@ -89,7 +89,7 @@ function Page() {
         <Typography variant="h2" size="h5" decoration="none" className={"mb-4"}>
           Stroke
         </Typography>
-        <div className="flex flex-row justify-start w-full max-w-5xl space-x-4">
+        <div className="flex flex-row justify-start w-full max-w-5xl flex-wrap gap-4">
           <Glass>
                 <Typography variant="h2" size="h5" decoration="none">
                     Default

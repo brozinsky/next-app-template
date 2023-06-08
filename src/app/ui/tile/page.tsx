@@ -14,7 +14,7 @@ function Page() {
         <Typography variant="h2" size="h5" decoration="none" className={"mb-4"}>
           Color on hover
         </Typography>
-        <div className="flex flex-row justify-start w-full max-w-5xl space-x-4">
+        <div className="flex flex-row justify-start w-full max-w-5xl flex-wrap gap-4">
           <Tile icon={<UserSvg className="w-10 h-10" />} variant="hover">Default</Tile>
           <Tile icon={<UserSvg className="w-10 h-10" />} variant="hover" color="green">Green</Tile>
           <Tile icon={<UserSvg className="w-10 h-10" />} variant="hover" color="blue">Blue</Tile>
@@ -28,7 +28,7 @@ function Page() {
         <Typography variant="h2" size="h5" decoration="none" className={"mb-4"}>
           Colored
         </Typography>
-        <div className="flex flex-row justify-start w-full max-w-5xl space-x-4">
+        <div className="flex flex-row justify-start w-full max-w-5xl flex-wrap gap-4">
           <Tile icon={<UserSvg className="w-10 h-10" />} variant="color">Default</Tile>
           <Tile icon={<UserSvg className="w-10 h-10" />} variant="color" color="green">Green</Tile>
           <Tile icon={<UserSvg className="w-10 h-10" />} variant="color" color="blue">Blue</Tile>

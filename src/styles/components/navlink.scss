@@ -1,7 +1,6 @@
 .navlink {
     $this: &;
-    @apply relative overflow-x-hidden py-6;
-
+    @apply relative overflow-x-hidden;
     &:after {
         @apply bg-primary-500 w-full block absolute;
         content: "";

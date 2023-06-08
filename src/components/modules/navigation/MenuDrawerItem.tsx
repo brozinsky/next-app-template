@@ -57,7 +57,7 @@ const MenuDrawerItem = ({id, url, title, Icon, list, isCollapsed}: MenuDrawerIte
       {list && list.length > 0 ? (
         //item with on hover box
         <>
-          <div className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg cursor-pointer select-none dark:text-white hover:bg-gray-100 dark:hover:bg-dark-900">
+          <div className="menu-drawer__item">
             <div className="flex items-center w-8 h-8">
               <Icon />
             </div>
@@ -71,7 +71,7 @@ const MenuDrawerItem = ({id, url, title, Icon, list, isCollapsed}: MenuDrawerIte
               onMouseLeave={() => {
                 setIsOverList(false);
               }}
-              className="pt-12 h-full absolute left-[318px] top-0 bg-white w-[200px] dark:bg-dark-900"
+              className="menu-drawer__box"
             >
               {list.map(({id, title, url}) => {
                 return (
@@ -85,8 +85,8 @@ const MenuDrawerItem = ({id, url, title, Icon, list, isCollapsed}: MenuDrawerIte
         </>
       ) : (
         //link without on hover box
-        <Link href={url} className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-dark-900">
-          <div className="flex items-center w-8 h-8">
+        <Link href={url} className="menu-drawer__item ">
+          <div className="flex items-center w-6 h-6">
             <Icon />
           </div>
           {!isCollapsed ? <span className="ml-3">{title}</span> : null}

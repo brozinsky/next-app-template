@@ -9,11 +9,11 @@ import React from "react";
 import Breadcrumbs from '@/modules/navigation/Breadcrumbs';
 import { useMenuDrawer } from "@/store/useDrawerStore";
 
-const wrapperClasses = cva(["p-8 flex flex-col items-start justify-start h-screen transition-all"], {
+const wrapperClasses = cva(["main"], {
   variants: {
     isDrawerOpen: {
-      true: "ml-80",
-      false: "ml-auto",
+      true: "main--open",
+      false: "main--closed",
     },
     isDrawerCollapsed: {
       true: "",
@@ -24,22 +24,22 @@ const wrapperClasses = cva(["p-8 flex flex-col items-start justify-start h-scree
     {
       isDrawerOpen: true,
       isDrawerCollapsed: true,
-      className: "ml-auto",
+      className: "main--closed",
     },
     {
       isDrawerOpen: true,
       isDrawerCollapsed: false,
-      className: "ml-80",
+      className: "main--open",
     },
     {
       isDrawerOpen: false,
       isDrawerCollapsed: true,
-      className: "ml-auto",
+      className: "main--closed",
     },
     {
       isDrawerOpen: false,
       isDrawerCollapsed: false,
-      className: "ml-auto",
+      className: "main--closed",
     },
   ],
 });

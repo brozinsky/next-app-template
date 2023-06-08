@@ -41,9 +41,9 @@ const MenuTopApp = () => {
 
   return (
     <>
-      <header className="sticky top-0 z-50 bg-elevation-700">
+      <header className="menu-top">
         <nav className="container flex flex-wrap items-center justify-between">
-          <ButtonIcon className="self-center" onClick={toggleIsDrawerOpen} size={"default"} color={"transparent"} variant={"primary"} icon={<Icon />} />
+          <ButtonIcon className="self-center !pr-0" onClick={toggleIsDrawerOpen} size={"sm"} color={"transparent"} variant={"primary"} icon={<Icon />} />
           <Link href="/">
             <div className="flex items-center flex-shrink-0 mr-6 text-white cursor-pointer select-none">
               <span className="text-xl font-semibold tracking-tight text-primary-500 dark:text-primary-200">Logo</span>

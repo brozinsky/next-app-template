@@ -7,7 +7,7 @@ const NavLink = ({children, href}) => {
     <Link href={href}>
       <span
         // className={`${location.pathname === href ? "navlink--active" : ""}
-        className="block mt-4 text-lg cursor-pointer select-none navlink lg:inline-block lg:mt-0"
+        className="block mt-4 cursor-pointer select-none navlink lg:inline-block lg:mt-0"
       >
         {children}
       </span>

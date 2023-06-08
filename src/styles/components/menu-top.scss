@@ -1,0 +1,12 @@
+.menu-top {
+    @apply mx-2 rounded-b-2xl sticky top-0 z-50 bg-elevation-700 border border-elevation-50 py-2 px-4;
+    &__link {
+        @apply py-2 block mt-4 text-base cursor-pointer select-none navlink;
+        &:hover {
+            @apply text-elevation-100;
+        }
+        @include lg {
+            @apply inline-block mt-0;
+        }
+    }
+}

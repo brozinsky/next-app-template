@@ -79,7 +79,7 @@ function Page() {
           <ButtonIcon size={"sm"} color={"transparent"} variant={"secondary"} icon={<Icon />} />
         </div>
       </div>
-      <div className="flex flex-row justify-start w-full max-w-5xl space-x-4">
+      <div className="flex flex-row justify-start w-full max-w-5xl flex-wrap gap-4">
         <div className="tile-button">
           <UserSvg className="w-10 h-10"/>
           <div>Default</div>
@@ -109,7 +109,7 @@ function Page() {
           <div>Red</div>
         </div>
       </div>
-      <div className="flex flex-row justify-start w-full max-w-5xl space-x-4">
+      <div className="flex flex-row justify-start w-full max-w-5xl flex-wrap gap-4">
         <div className="tile-button">
           <UserSvg className="w-10 h-10"/>
           <div>Default</div>

@@ -22,7 +22,7 @@ const Home = () => {
       <Typography variant="h1" size="h3" decoration="lineBot" className={"font-medium mb-8"}>
         Dashboard
       </Typography>
-      <div className="flex flex-row justify-between w-full max-w-5xl space-x-4">
+      <div className="grid grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 justify-between w-full max-w-5xl gap-4">
         {categories.map(({id, Icon, title, info, href}) => {
           return <CategoryTile key={id} Icon={Icon} title={title} info={info} href={href} />;
         })}

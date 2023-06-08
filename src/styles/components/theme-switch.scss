@@ -11,8 +11,8 @@
         display: none;
     }
     &__icon {
-        height: 23px;
-        width: 23px;
+        height: 18px;
+        width: 18px;
         display: block;
         transform-origin: 50% 0;
         &:nth-child(2) {
@@ -22,7 +22,7 @@
     &__label {
         display: block;
         overflow: hidden;
-        height: 23px;
+        height: 18px;
         text-indent: -0.9em;
     }
 }
